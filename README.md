@@ -1,4 +1,7 @@
-# Hive UDF Examples
+# Hive UDF's including
+* MD5 function for Hive < 1.3.0
+
+A special profile for use with the MapR distribution is included.
 
 ## Compile
 
@@ -15,9 +18,13 @@ mvn test -DproxySet=true -DsocksProxyHost=localhost -DsocksProxyPort=6666
 ## Build
 ```
 mvn clean package -DproxySet=true -DsocksProxyHost=localhost -DsocksProxyPort=6666
+
+or for MapR
+
+mvn -Phadoop-mapr,scope-provided clean package -DproxySet=true -DsocksProxyHost=localhost -DsocksProxyPort=6666
 ```
 
-## Run
+## Run and test
 
 ```
 %> hive
